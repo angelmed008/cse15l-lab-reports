@@ -39,3 +39,12 @@
     - Outcome: 127.0.0.1   localhost
     - Note: The `/etc/hosts` file maps hostnames to IP addresses.
 
+![Image](example1.png)
+![Image](example2.png)
+![Image](example3.png)
+![Image](example4.png)
+![Image](example5.png)
+![Image](example6.png)
+![Image](example7.png)
+![Image](example8.png)
+
