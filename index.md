@@ -1,4 +1,4 @@
-## WEEK 2 LAB REPORT 1
+## WEEK 2 LAB REPORT 1 - Angel Medina
 
 1. **cd Command**
     - Command: `cd`
