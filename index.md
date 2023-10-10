@@ -1,98 +1,122 @@
 ```markdown
-## Command Analysis
-
-### 1. `cd` Command
-
-Example without arguments:
-```bash
-C:\Users\Angel Medina>
-```
-Changes directory to the home directory. Not an error. This can be executed from any directory.
+## Command Analysis & Observations
 
 ---
 
-### 2. Navigating to the `C:` Drive
+🔍 **Command 1: Default `cd` Usage**
 
-On Windows:
+**Command:**
+```bash
+cd
+```
+**Description**: Navigates to the home directory.
+**Outcome**: 
+```bash
+C:\Users\Angel Medina>
+```
+**Errors**: None.
+
+---
+
+🔍 **Command 2: Navigating to `C:` Drive Root**
+
+**Command:**
 ```bash
 cd C:
 ```
-Output:
+**Outcome**: 
 ```bash
 C:\>
 ```
-The working directory was `C:\Users\Angel Medina>`. This means I navigated to the base level of my `C:` drive. There is no error.
+**Description**: This changed the current directory to the root of the `C:` drive.
+**Errors**: None.
 
 ---
 
-### 3. Attempting to `cd` into a File
+🔍 **Command 3: Attempt to `cd` into `hosts`**
 
-I used:
+**Command:**
 ```bash
 cd C:\Users\Angel Medina>
 ```
-I got an error because the `cd` command is used to change directories, and `hosts` is a file, not a directory. So, even if you try to `cd` into the correct path for the `hosts` file on Windows, you'd still get an error because you can't change directory to a file.
+**Description**: An attempt to change directory into a file (hosts) which is not valid.
+**Errors**: Yes, `cd` can't be used with files.
 
 ---
 
-### 4. Using `ls` in PowerShell
+🔍 **Command 4: List Directory Contents with `ls`**
 
-After using PowerShell, I got a list of the contents of the directories:
+**Command:**
 ```bash
-C:\Users\Angel Medina>
+ls
 ```
-`ls` executed with no arguments will list the files and directories in the current working directory. This is not an error!
+**Description**: Lists files and directories in the current directory.
+**Outcome**: Displayed directory contents.
+**Errors**: None.
 
 ---
 
-### 5. Listing Contents of `/etc`
+🔍 **Command 5: Checking `/etc` Contents**
 
-No, the output is not an error. It's a display of some of the contents of the `/etc` directory. If there were an error, it might be due to the directory not existing or the user not having permission to view its contents. The output indicates a successful listing of files and directories. I did have an error, so I need to check it:
+**Command:**
 ```bash
-C:\Users\Angel Medina>
+ls /etc
 ```
+**Description**: Displayed some contents of the `/etc` directory.
+**Outcome**: Successfully listed some contents.
+**Errors**: Possible, if directory doesn't exist or due to permission issues.
 
 ---
 
-### 6. Checking Existence of a File
+🔍 **Command 6: Checking Existence of `/etc/hosts`**
 
-This will work with any directory:
+**Command:**
 ```bash
 ls /etc/hosts
 ```
-`ls /etc/hosts` specifically requests a listing of the file `/etc/hosts`. The output `/etc/hosts` confirms the existence of that file in the system. However, I still got an error on my Windows computer:
+**Description**: Intended to verify the existence of the `/etc/hosts` file.
+**Outcome**: Confirmed the file's existence.
+**Errors**: Encountered some on Windows.
+
+---
+
+🔍 **Command 7: Using `cat` without Specifying File**
+
+**Command:**
+```bash
+cat
+```
+**Description**: Without arguments, `cat` usually reads from standard input on UNIX systems.
+**Outcome**: 
 ```bash
 C:\Users\Angel Medina>
 ```
-This command should work in all directories.
+**Errors**: Directory not found on Windows.
 
 ---
 
-### 7. Using `cat` without Arguments
+🔍 **Command 8: Attempt to Display Directory Contents with `cat`**
 
-The command `$ cat` is typically used in UNIX systems to display the content of files. When executed without arguments, it reads input from the standard input. I used:
+**Command:**
 ```bash
-C:\Users\Angel Medina>
+cat /etc
 ```
-I got an error since the directory can't be found.
+**Description**: `cat` aims to display file contents. Using it on a directory results in an error.
+**Errors**: "Is a directory".
 
 ---
 
-### 8. Attempting to `cat` a Directory
+🔍 **Command 9: Displaying Content of `/etc/hosts`**
 
-`$ cat /etc` will produce an error:
-```bash
-Error - "Is a directory"
-```
-However, all directories should work with this command. `cat` is designed to display the content of files, not directories. When `/etc` is specified, you are referencing a directory, not a file.
-
----
-
-### 9. Displaying Content of `/etc/hosts` File
-
-This command should display all file content:
+**Command:**
 ```bash
 cat /etc/hosts
 ```
-However, I get an error, so I need to fix it. The file `/etc/hosts` is a system configuration file that maps hostnames to IP addresses. In the output, `127.0.0.1` is an IP address referring to the local machine, and it is mapped to the hostname `localhost`.
+**Description**: Should display the contents of the `/etc/hosts` file. This file maps IP addresses to hostnames.
+**Outcome**: 
+```bash
+127.0.0.1   localhost
+```
+**Errors**: Some encountered on Windows.
+
 ```
