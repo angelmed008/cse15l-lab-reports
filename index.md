@@ -1,43 +1,44 @@
 ## Command Analysis
 
-1. Using `cd` Without Arguments
+1. **cd Command**
     - Command: `cd`
     - Outcome: C:\Users\Angel Medina>
-    - Note: Changes directory to the home directory. This command can be executed from any directory without errors.
+    - Note: Changes directory to the user's home directory. There's no error with this command and it can be used from any directory.
 
-2. Navigating to `C:` Drive
+2. **Navigating to the C: Drive**
     - Command: `cd C:`
     - Outcome: C:\>
-    - Note: Navigated to the base level of my C: drive from C:\Users\Angel Medina>. No error.
+    - Note: I navigated to the base level of the C: drive from C:\Users\Angel Medina>. There were no errors.
 
-3. Attempt to `cd` into `hosts`
+3. **Attempting to cd into hosts**
     - Command: `cd C:\Users\Angel Medina>`
-    - Note: Error encountered because `hosts` is a file, not a directory.
+    - Note: I received an error because `hosts` is a file, not a directory. You can't change directory to a file.
 
-4. List Contents with `ls`
+4. **Listing Contents with ls**
     - Command: `ls`
-    - Note: Lists directory contents from C:\Users\Angel Medina>. No error.
+    - Note: After using Powershell, I saw the contents of the directory at C:\Users\Angel Medina>. It lists the files and directories in the current directory.
 
-5. View `/etc` Contents
+5. **Checking the /etc Contents**
     - Command: `ls /etc`
-    - Note: Displays contents of the `/etc` directory. Possible errors might be due to the directory not existing or lacking view permissions. 
+    - Note: This command shows some of the contents in the /etc directory. If there's an error, it could be because the directory doesn't exist or I don't have the permission to view its contents.
 
-6. Check `/etc/hosts` Existence
+6. **Checking the /etc/hosts File**
     - Command: `ls /etc/hosts`
-    - Note: Aims to verify the existence of the `/etc/hosts` file. Error occurred on Windows.
+    - Note: This command checks the existence of the /etc/hosts file. However, there was an error on my Windows computer.
 
-7. Using `cat` Without Specifying File
-    - Command: `cat`
-    - Note: On UNIX, `cat` reads from standard input without arguments. Error encountered on Windows due to directory not found.
+7. **Using cat Without a Specified File**
+    - Command: `$ cat`
+    - Note: This command is typically used in UNIX systems to display the content of files. But when used without arguments, it reads from the standard input. On my Windows system, I got an error because the directory couldn't be found.
 
-8. Attempt to Display Directory Contents with `cat`
-    - Command: `cat /etc`
-    - Note: Error ("Is a directory") because `cat` is for files, not directories.
+8. **Trying to Display Directory Contents with cat**
+    - Command: `$ cat /etc`
+    - Note: I received an error because the cat command is designed to display the content of files, not directories. So when I specify /etc, I'm referencing a directory, not a file.
 
-9. Display `/etc/hosts` Content
-    - Command: `cat /etc/hosts`
-    - Outcome: 127.0.0.1   localhost
-    - Note: The `/etc/hosts` file maps hostnames to IP addresses.
+9. **Displaying the Content of /etc/hosts**
+    - Command: `$ cat /etc/hosts`
+    - Outcome: Displays content like "127.0.0.1   localhost"
+    - Note: The /etc/hosts file is a system configuration file that maps hostnames to IP addresses.
+
 
 ![Image](example1.png)
 ![Image](example2.png)
